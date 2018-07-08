@@ -10,13 +10,13 @@ spec:
     rollingUpdate:
       maxUnavailable: 1
       maxSurge: 1
-  template:  # resembles pod.yaml
+  template:
     metadata:
       labels:
         app: sa-frontend
     spec:
       containers:
-        - image: rinormaloku/sentiment-analysis-frontend
+        - image: madstein/sentiment-analysis-frontend:minikube
           imagePullPolicy: Always
           name: sa-frontend
           ports:
